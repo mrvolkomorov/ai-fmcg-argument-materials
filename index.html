@@ -13,14 +13,14 @@
     line-height: 1.55;
     padding: 0 0 60px 0;
   }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
   header {
     background: #1a2e44;
     color: #fff;
     padding: 36px 24px 32px 24px;
     margin-bottom: 36px;
   }
-  header .wrap { max-width: 1100px; margin: 0 auto; }
+  header .wrap { max-width: 1120px; margin: 0 auto; }
   header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
   header .subtitle { font-size: 16px; color: #cfd6df; }
   header .meta { margin-top: 16px; font-size: 13px; color: #8d99a8; }
@@ -34,57 +34,108 @@
   .stat-item .label { font-size: 13px; color: #6b7a8a; margin-top: 2px; }
   .section-title {
     font-size: 20px; font-weight: 700; color: #1a2e44;
-    margin: 36px 0 16px 0; padding-bottom: 8px;
+    margin: 36px 0 6px 0; padding-bottom: 8px;
     border-bottom: 2px solid #d8dde3;
   }
-  .section-lead { font-size: 15px; color: #3a4a5a; margin: -6px 0 18px 0; max-width: 860px; }
-  .card {
-    background: #fff; border-radius: 12px; padding: 22px 26px;
+  .section-lead { font-size: 15px; color: #3a4a5a; margin: 0 0 18px 0; max-width: 900px; }
+
+  /* --- единая таблица материалов --- */
+  .table-wrap {
+    background: #fff; border-radius: 12px; overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    margin-bottom: 14px;
   }
-  .card-header { display: flex; gap: 16px; align-items: flex-start; }
-  .card-num {
-    flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px;
-    color: #fff; font-weight: 700; font-size: 16px;
-    display: flex; align-items: center; justify-content: center;
+  table.materials { width: 100%; border-collapse: collapse; }
+  table.materials thead th {
+    background: #22374f; color: #fff; text-align: left;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 13px 16px;
   }
-  .card-title-area { flex: 1; }
-  .card-title-area h3 {
-    font-size: 16px; font-weight: 600; line-height: 1.4; margin-bottom: 8px;
+  table.materials tbody td {
+    padding: 16px; vertical-align: top;
+    border-bottom: 1px solid #eceef1; font-size: 14px; color: #3a4a5a;
   }
-  .card-title-area h3 a { color: #1a2e44; text-decoration: none; }
-  .card-title-area h3 a:hover { text-decoration: underline; }
-  .summary { font-size: 14px; color: #3a4a5a; margin-bottom: 8px; }
-  .useful { font-size: 14px; color: #1a2e44; }
-  .useful strong { color: #1a2e44; }
-  .file-badge {
-    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
-    text-transform: uppercase; color: #fff; background: #6b7a8a;
-    border-radius: 4px; padding: 2px 7px; margin-left: 8px; vertical-align: 2px;
+  table.materials tbody tr:last-child td { border-bottom: none; }
+  table.materials tbody tr:nth-child(even) { background: #fafbfc; }
+  td.c-num { width: 34px; color: #9aa7b4; font-weight: 700; font-size: 13px; }
+  td.c-title { width: 30%; }
+  td.c-what { width: 36%; }
+  td.c-use { width: 28%; }
+  .m-name { font-weight: 600; color: #1a2e44; font-size: 15px; line-height: 1.35; margin-bottom: 4px; }
+  .m-name a { color: #1a2e44; text-decoration: none; border-bottom: 1px solid #b9c4cf; }
+  .m-name a:hover { border-bottom-color: #1a2e44; }
+  .m-src { font-size: 12px; color: #8d99a8; }
+  .m-what { margin-bottom: 6px; }
+  .m-use { color: #1a2e44; }
+  .m-use strong { color: #1565c0; font-weight: 600; }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 600; color: #fff;
+    background: #1565c0; border-radius: 4px; padding: 1px 7px; margin-right: 6px;
+    vertical-align: 1px;
   }
+  .tag.t2 { background: #7b1fa2; }
+  .tag.t3 { background: #00838f; }
+  .tag.t4 { background: #e65100; }
+
+  /* --- раздаточные блоки --- */
+  .handout {
+    background: #fff; border-radius: 12px; padding: 24px 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 16px;
+  }
+  .handout h3 { font-size: 17px; color: #1a2e44; margin-bottom: 4px; }
+  .handout .lead { font-size: 14px; color: #5a6b7c; margin-bottom: 14px; }
+  table.inner { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.inner th {
+    background: #eef1f4; color: #1a2e44; text-align: left; font-weight: 600;
+    padding: 9px 12px; font-size: 13px;
+  }
+  table.inner td { padding: 10px 12px; border-bottom: 1px solid #eceef1; color: #3a4a5a; vertical-align: top; }
+  table.inner tr:last-child td { border-bottom: none; }
+  .formula { font-weight: 600; color: #1a2e44; }
+  .scroll-x { overflow-x: auto; }
+
+  .prompt-box {
+    background: #f7f9fa; border-left: 3px solid #1565c0; border-radius: 0 8px 8px 0;
+    padding: 14px 18px; margin-top: 12px;
+  }
+  .prompt-box .p-name { font-weight: 600; color: #1565c0; font-size: 13px; margin-bottom: 6px; }
+  .prompt-box pre {
+    white-space: pre-wrap; font-family: "SF Mono", Consolas, "Liberation Mono", monospace;
+    font-size: 13px; line-height: 1.6; color: #26374a; margin: 0;
+  }
+  .file-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #1a2e44; color: #fff; text-decoration: none;
+    border-radius: 8px; padding: 10px 16px; font-size: 14px; font-weight: 600;
+  }
+  .file-link:hover { background: #22374f; }
+  .file-link .badge {
+    background: rgba(255,255,255,0.2); border-radius: 4px; padding: 1px 6px;
+    font-size: 11px; font-weight: 700;
+  }
+
   .cheatsheet {
     background: #fff; border-radius: 12px; padding: 24px 28px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    margin-top: 36px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-top: 28px;
   }
   .cheatsheet h2 { font-size: 18px; margin-bottom: 16px; color: #1a2e44; }
   .cheat-row {
     display: flex; align-items: center; gap: 12px;
-    padding: 8px 0; border-bottom: 1px solid #eef0f3;
-    font-size: 14px;
+    padding: 8px 0; border-bottom: 1px solid #eef0f3; font-size: 14px;
   }
   .cheat-row:last-child { border-bottom: none; }
   .cheat-task { flex: 1; color: #3a4a5a; }
   .cheat-arrow { color: #6b7a8a; }
   .cheat-tool { font-weight: 600; color: #1a2e44; }
-  footer {
-    text-align: center; margin-top: 48px; font-size: 13px; color: #6b7a8a;
-  }
+  footer { text-align: center; margin-top: 48px; font-size: 13px; color: #6b7a8a; }
   footer a { color: #1a2e44; }
-  @media (max-width: 640px) {
+  @media (max-width: 860px) {
     header h1 { font-size: 22px; }
-    .card-header { flex-direction: column; gap: 8px; }
+    table.materials thead { display: none; }
+    table.materials tbody tr { display: block; padding: 14px 16px; border-bottom: 1px solid #eceef1; }
+    table.materials tbody td { display: block; padding: 0; border: none; }
+    td.c-num { margin-bottom: 4px; }
+    td.c-title { margin-bottom: 8px; }
+    td.c-what, td.c-use { margin-bottom: 8px; }
     .cheat-row { flex-direction: column; align-items: flex-start; gap: 4px; }
   }
 </style>
@@ -93,198 +144,256 @@
 <header>
   <div class="wrap">
     <h1>Дополнительные материалы · Занятие 7</h1>
-    <div class="subtitle">Аргументация без оправданий — факты с источниками, паспорт аргумента и прогон против байера</div>
-    <div class="meta">29 октября 2026 · Месяц 2 · неделя 5 · 14 материалов для самостоятельного изучения</div>
+    <div class="subtitle">Аргументация без оправданий — ИИ-агенты, автоматизация таблиц, переговорный тренажёр и скиллы</div>
+    <div class="meta">29 октября 2026 · Месяц 2 · неделя 5 · 13 материалов для самостоятельного изучения</div>
   </div>
 </header>
 
 <div class="container">
 
 <div class="stats">
-  <div class="stat-item"><div class="num">14</div><div class="label">материалов</div></div>
-  <div class="stat-item"><div class="num">11</div><div class="label">на русском</div></div>
-  <div class="stat-item"><div class="num">3</div><div class="label">на английском</div></div>
-  <div class="stat-item"><div class="num">4</div><div class="label">блока</div></div>
+  <div class="stat-item"><div class="num">13</div><div class="label">материалов по ИИ</div></div>
+  <div class="stat-item"><div class="num">9</div><div class="label">на русском</div></div>
+  <div class="stat-item"><div class="num">4</div><div class="label">на английском</div></div>
+  <div class="stat-item"><div class="num">4</div><div class="label">блока из раздатки</div></div>
 </div>
 
-<div class="section-title">Материалы занятия</div>
-<p class="section-lead">То, с чем работаете на дз: раздатка с формулой аргумента, шаблоном паспорта и четырьмя промптами — и страница домашнего задания с двумя сроками и критериями зачёта.</p>
+<div class="section-title">Материалы из раздатки занятия</div>
+<p class="section-lead">Рабочие инструменты тренера, которые нужны под рукой во время домашнего задания: формула аргумента и четыре промпта. Домашнее задание с критериями зачёта — отдельной ссылкой в карточке занятия.</p>
 
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#1565c0;">1</div>
-    <div class="card-title-area">
-      <h3><a href="Razdatka_Praktiki_Nedelya_5.docx" download>Раздатка практики — «Аргументация без оправданий»</a><span class="file-badge">Word · 44 КБ</span></h3>
-      <p class="summary">Пять разделов: формула рабочего аргумента из четырёх звеньев, шаблон паспорта на пять колонок с пустыми строками, иерархия источников фактов и список «в паспорт не попадают никогда», четыре промпта занятия дословно (запросник, помощник, вводная для байера, СТОП ИГРА) и домашнее задание с критериями зачёта А1–Б2.</p>
-      <p class="useful"><strong>Чем полезно:</strong> это рабочий документ, который нужен под рукой во время дз, а не пересказ занятия. Формула аргумента объясняет, почему «у нас выросли издержки» байер разбивает за два раунда, — и показывает, где в вашем предложении должно стоять выгода сети. Промпты перенесены дословно, с плейсхолдерами в квадратных скобках: вставляете своё, остальное не трогаете.</p>
-    </div>
+<div class="handout">
+  <h3>Формула рабочего аргумента</h3>
+  <p class="lead">Аргумент «у нас выросли издержки» байер разбивает за два раунда: себестоимость — зона ответственности поставщика, а за дверью стоят конкуренты, которым пересчёт не нужен. Рабочий аргумент открывается рынком и закрывается выгодой сети. Ваше предложение в нём — только третье звено из четырёх.</p>
+  <div class="scroll-x">
+  <table class="inner">
+    <thead><tr><th>Звено</th><th>Что это</th><th>Откуда берём</th></tr></thead>
+    <tbody>
+      <tr><td class="formula">01 · Внешний факт с источником</td><td>Проверяемая цифра рынка, которую байер может открыть сам</td><td>Практика 1, промпт 1 — запросник</td></tr>
+      <tr><td class="formula">02 · Влияние на категорию</td><td>Почему этот факт касается именно вашей полки</td><td>Паспорт, колонка 3 — заполняете сами</td></tr>
+      <tr><td class="formula">03 · Предложение</td><td>Ваше коммерческое решение: индекс, срок, условия</td><td>Только вы. ИИ это решение не принимает</td></tr>
+      <tr><td class="formula">04 · Выгода сети</td><td>Что сеть получает, если согласится сейчас</td><td>Практика 2, промпт 2 — помощник</td></tr>
+    </tbody>
+  </table>
   </div>
+  <p style="margin-top:12px;font-size:14px;color:#3a4a5a;"><strong style="color:#1a2e44;">Проверка строки на прочность.</strong> Формулировка читается вслух за 15 секунд и заканчивается выгодой сети. Если заканчивается вашей просьбой — переписывайте пятую колонку паспорта.</p>
 </div>
 
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#1565c0;">2</div>
-    <div class="card-title-area">
-      <h3><a href="https://mrvolkomorov.github.io/fmcg-argument-homework/" target="_blank" rel="noopener">Домашнее задание — две части с разными сроками</a></h3>
-      <p class="summary">Пошаговая инструкция: Часть А — паспорт по своей категории до 4 ноября; Часть Б — симуляция реальной встречи до 18 ноября с обязательным повторным прогоном после правки сломанной строки. Плюс критерии зачёта, таблица «о чём сломался аргумент», типовые сложности и чек-лист сдачи.</p>
-      <p class="useful"><strong>Чем полезно:</strong> отвечает на вопрос «что и когда сдавать». Паспорт нужен уже на неделе 6 (5 ноября) — из его строк собираем ответы на возражения закупщиков; симуляцию разбираем на неделе 8 (19 ноября). Перед отправкой лога — проверка: только индексы и «Сеть 1», ни одной своей цифры.</p>
-    </div>
+<div class="handout">
+  <h3>Четыре промпта занятия</h3>
+  <p class="lead">Цепочка ведёт от открытых данных до разобранной симуляции. Подставляйте своё в квадратных скобках, остальной текст не меняйте.</p>
+
+  <div class="prompt-box">
+    <div class="p-name">ПРОМПТ 1 — ЗАПРОСНИК · Perplexity или режим глубокого поиска в ChatGPT / Claude</div>
+    <pre>Ты — аналитик рынка FMCG. Мне нужны данные для обоснования изменения цен / в категории [КАТЕГОРИЯ] на переговорах с розничной сетью.
+/ Найди актуальные данные за последние 12 месяцев по трём блокам:
+1. Макроэкономика: индекс потребительских цен в целом и по группе /    [ГРУППА ТОВАРОВ], ключевая ставка, динамика курса рубля.
+2. Сырьё: динамика цен на [КЛЮЧЕВОЕ СЫРЬЁ КАТЕГОРИИ] — биржевые котировки, /    данные отраслевых ассоциаций, официальная статистика.
+3. Логистика: динамика тарифов на автоперевозки, цен на дизельное топливо, /    стоимости складских услуг.
+Требования к каждому факту:
+— прямая ссылка на первоисточник (не на пересказ в СМИ);
+— дата данных и дата публикации;
+— приоритет: официальная статистика > биржи > отраслевые ассоциации > СМИ;
+— если по блоку нет свежих данных из надёжного источника — напиши об этом /   прямо, ничего не додумывай.
+Формат: таблица «факт — цифра — источник — дата».</pre>
   </div>
+
+  <div class="prompt-box">
+    <div class="p-name">ПРОМПТ 2 — ПОМОЩНИК · обычный чат с ИИ, не байер</div>
+    <pre>Ты — коммерческий директор поставщика FMCG, готовишься к переговорам / с розничной сетью о плановом изменении цены.
+/ Вот факт рынка: [СУТЬ ФАКТА БЕЗ ЦИФР — например: «ключевое сырьё категории / дорожает несколько кварталов подряд по данным отраслевой ассоциации»].
+/ Моя категория: [КАТЕГОРИЯ].
+/ Предложи 3 варианта короткой формулировки этого факта для байера / (каждая — не длиннее двух предложений) и для каждой — в чём выгода сети, / если она примет предложение сейчас: стабильность полки, предсказуемость / маржи, цена не выше конкурентов, снижение риска перебоев поставок.
+/ Не используй цифры — только логику. Без извинений и оправданий / издержками поставщика.</pre>
+  </div>
+
+  <div class="prompt-box">
+    <div class="p-name">ПРОМПТ 3 — ВВОДНАЯ ДЛЯ БАЙЕРА · первое сообщение в новом диалоге</div>
+    <pre>Сценарий: плановое повышение цены, индекс 100 → [ВАШ ИНДЕКС].
+/ Мои аргументы (буду доставать по ходу переговоров, не все сразу):
+1. [ФОРМУЛИРОВКА ДЛЯ БАЙЕРА — строка 1 паспорта] — [ВЫГОДА СЕТИ — строка 1]
+2. [ФОРМУЛИРОВКА ДЛЯ БАЙЕРА — строка 2 паспорта] — [ВЫГОДА СЕТИ — строка 2]
+3. [ФОРМУЛИРОВКА ДЛЯ БАЙЕРА — строка 3 паспорта] — [ВЫГОДА СЕТИ — строка 3]
+/ Начинай переговоры.</pre>
+  </div>
+
+  <div class="prompt-box">
+    <div class="p-name">ПРОМПТ 4 — СТОП ИГРА · отправить в том же диалоге, когда переговоры закончены</div>
+    <pre>СТОП ИГРА. Выйди из роли байера и разбери мои переговоры.
+/ Оцени меня по пяти критериям — по каждому ответь «да» или «нет» / и приведи одну мою реплику из диалога, на которой основана оценка:
+1. Якорь удержан не менее 3 раундов.
+2. Уступка — только на встречное требование.
+3. Без оправданий издержками.
+4. Аргументы — про выгоду сети, не про свои проблемы.
+5. Зафиксирован следующий шаг.
+/ Затем ответь: какой мой аргумент ты сломал первым и чем именно.
+/ Не смягчай оценку и не хвали за то, чего не было в диалоге.</pre>
+  </div>
+
+  <p style="margin-top:16px;">
+    <a class="file-link" href="Razdatka_Praktiki_Nedelya_5.docx" download>📄 Скачать раздатку целиком <span class="badge">Word · 44 КБ</span></a>
+  </p>
 </div>
 
-<div class="section-title">Где брать факты: официальные источники</div>
-<p class="section-lead">Три слоя паспорта — макро, сырьё, логистика — требуют разных первоисточников. Ниже те, которые байер не сможет оспорить: государственная статистика, регулятор и биржа.</p>
+<div class="section-title">Документация и разборы: что изучать дальше</div>
+<p class="section-lead">Все материалы — про работу ИИ, а не про экономику. Отобраны под три сюжета занятия: агент и его инструменты, качество ответа и его проверка, повторяемая задача в скилле. Уровень — после шести занятий: это не основы промптов, а то, с чем вы работаете дальше.</p>
 
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">3</div>
-    <div class="card-title-area">
-      <h3><a href="https://rosstat.gov.ru/statistics/price" target="_blank" rel="noopener">Росстат: Цены, инфляция</a> — rosstat.gov.ru</h3>
-      <p class="summary">Раздел с индексами потребительских цен по товарным группам и регионам, еженедельные средние потребительские цены на отдельные товары, структура потребительских расходов по группам товаров и цены, приобретённые промышленными организациями. Всё отдаётся готовыми XLSX с датой обновления.</p>
-      <p class="useful"><strong>Чем полезно:</strong> прямое попадание в колонку 1 паспорта. ИПЦ по вашей товарной группе — тот макро-факт, который нельзя переписать в свою пользу. Еженедельные средние цены дают вторую цифру по вашему конкретному товару, а не по всей группе: байер проверяет именно её. Ссылки на первоисточник и дату берёте отсюда, а не из пересказа в СМИ.</p>
-    </div>
-  </div>
+<div class="table-wrap">
+<div class="scroll-x">
+<table class="materials">
+  <thead>
+    <tr><th class="c-num">№</th><th class="c-title">Материал</th><th class="c-what">Что внутри</th><th class="c-use">Чем полезен</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="c-num">1</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag">Скиллы</span><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Anthropic — Agent Skills: как устроена упаковка задачи</a></div>
+        <div class="m-src">platform.claude.com</div>
+      </td>
+      <td class="c-what"><div class="m-what">Механика скилла целиком: папка с файлами, SKILL.md с инструкцией, дополнительные скрипты и данные, подключение к инструментам. Показано, что скилл — не промпт, а заготовленный контекст с алгоритмом.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Скилл «паспорт аргумента».</strong> Упаковываете в скилл свою категорию, список источников и алгоритм сборки паспорта — и получаете одну команду вместо объяснений каждый раз.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">2</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag">Скиллы</span><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Claude Code — субагенты: отдельный агент со своей ролью</a></div>
+        <div class="m-src">code.claude.com</div>
+      </td>
+      <td class="c-what"><div class="m-what">Как выделить отдельного субагента с собственной инструкцией, инструментами и моделью, в каталоге которого лежат файлы. Сравнение с субагентами на лету и правило «дешёвые задачи — на дешёвой модели».</div></td>
+      <td class="c-use"><div class="m-use"><strong>Байер отдельным субагентом.</strong> Роль оппонента выносится в отдельного агента с системной инструкцией «не закрывать сделку раньше 6-го раунда» — и не заражает основной диалог.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">3</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t2">Агенты</span><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">Anthropic — Building Effective Agents</a></div>
+        <div class="m-src">anthropic.com/research</div>
+      </td>
+      <td class="c-what"><div class="m-what">Ключевая развилка: workflow против агента. Пять рабочих паттернов — цепочка, маршрутизация, параллельность, оркестратор с кодом, автономный агент — с критериями выбора и разбором, где агент ломается.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Связка для переговорного тренажёра.</strong> Понимаете, что «Паспорт → Запросник → Байер → Разбор» — это цепочка, а не один толковый промпт, и где в ней нужна точка проверки человеком.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">4</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t2">Агенты</span><a href="https://www.anthropic.com/research/multi-agent-research-system" target="_blank" rel="noopener">Anthropic — как устроена мультиагентная система исследования</a></div>
+        <div class="m-src">anthropic.com/research</div>
+      </td>
+      <td class="c-what"><div class="m-what">Разбор реальной системы: ведущий агент запускает параллельных исследователей по подзадачам, каждый собирает свой участок, затем ведущий синтезирует единый отчёт. Показаны метрики, ошибки и цена такой схемы.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Промпт 1 на максимуме.</strong> Тот же приём вручную: три подзапроса — макро, сырьё, логистика — тремя параллельными диалогами и один сводный отчёт вместо одного длинного запроса.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">5</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t3">Контекст</span><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener">Anthropic — Effective context engineering for AI agents</a></div>
+        <div class="m-src">anthropic.com/research</div>
+      </td>
+      <td class="c-what"><div class="m-what">Почему длинный контекст не равен хорошему: что такое context rot, почему агенту нужны компактные заметки вместо всех файлов, техники just-in-time retrieval и compaction. Метрики качества при росте контекста.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Паспорт вместо простыни.</strong> Вместо файла на две страницы — сжатые тезисы по каждой строке паспорта, которые агент подгружает в нужный момент. Основа для «доставать аргументы по одному».</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">6</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t4">Проверка</span><a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents" target="_blank" rel="noopener">Anthropic — Demystifying evals: как оценивать работу агента</a></div>
+        <div class="m-src">anthropic.com/research</div>
+      </td>
+      <td class="c-what"><div class="m-what">Практический разбор: чем измерение агента отличается от тестов, три уровня оценки, критерии успеха под задачу, ловушки формулировок и почему оценку пишут до запуска, а не после.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Ваши пять критериев — это критерии зачёта.</strong> Формализуете рубрику СТОП ИГРА как измеримые условия, чтобы байер не хвалил «за старание». То же — для проверки качества паспорта.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">7</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t4">Проверка</span><a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks" target="_blank" rel="noopener">Anthropic — защита от инъекций и обхода инструкций</a></div>
+        <div class="m-src">platform.claude.com</div>
+      </td>
+      <td class="c-what"><div class="m-what">Что такое prompt injection на практике, почему модель не отличает данные от инструкций, техники защиты в промпте и на уровне приложения, тестовый набор примеров для проверки.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Байер не должен выскакивать из роли.</strong> Если в паспорт или в лог попал текст из интернета, модель может исполнить его как инструкцию. Здесь — как это закрыть и как проверить.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">8</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t3">Структура</span><a href="https://developers.openai.com/api/docs/guides/structured-outputs" target="_blank" rel="noopener">OpenAI — Structured Outputs: ответ в жёсткой схеме</a></div>
+        <div class="m-src">developers.openai.com</div>
+      </td>
+      <td class="c-what"><div class="m-what">Как заставить модель отдавать JSON по заданной схеме вместо свободного текста: ограничения, неподдерживаемые конструкции, режим strict, работа со схемами вложенности.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Паспорт в пяти колонках — на выходе.</strong> Задаёте схему пяти колонок и получаете готовую таблицу для Excel или Google Таблиц без ручного переноса. Снимает отдельную ошибку ввода.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">9</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t3">Таблицы</span><a href="https://support.google.com/docs/answer/15877199" target="_blank" rel="noopener">Google — ИИ-функция в таблицах (=GEMINI)</a></div>
+        <div class="m-src">support.google.com</div>
+      </td>
+      <td class="c-what"><div class="m-what">Синтаксис формулы =GEMINI(), требования к аккаунту и тарифу, режимы работы с диапазоном, ограничения по языку и по длине запроса, примеры массовой обработки строк.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Классификация строк паспорта.</strong> Один запрос в отдельной ячейке и ссылка на него в соседнем столбце — и вся таблица размечается за один проход, без десятка ручных копий.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">10</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t3">Таблицы</span><a href="https://help.openai.com/ru-ru/articles/10929079-google-drive-app-and-setup-in-chatgpt" target="_blank" rel="noopener">OpenAI — подключение Google Диска к ChatGPT</a></div>
+        <div class="m-src">help.openai.com (рус.)</div>
+      </td>
+      <td class="c-what"><div class="m-what">Пошаговая настройка приложения: доступ к Drive и Sheets, что именно видит модель, как ограничить папку, требования к тарифу и что происходит с данными после отключения.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Живая таблица вместо копии.</strong> Паспорт лежит в Google Таблицах — агент читает актуальную версию, а не снимок на момент загрузки. И сразу видно, что именно можно отдавать наружу.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">11</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t2">Автоматизация</span><a href="https://help.openai.com/ru-ru/articles/10291617-scheduled-tasks-in-chatgpt" target="_blank" rel="noopener">OpenAI — запланированные задачи в ChatGPT</a></div>
+        <div class="m-src">help.openai.com (рус.)</div>
+      </td>
+      <td class="c-what"><div class="m-what">Регулярные задачи по расписанию: постановка, периодичность, получение результата, каналы доставки и ограничения — включая требование к активной сессии агента.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Паспорт не устаревает.</strong> Раз в месяц бот сам пересобирает строки по свежим данным и присылает на проверку. Заменяет напоминалку «зайти и проконтролировать актуальность».</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">12</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t2">Протокол</span><a href="https://modelcontextprotocol.io/specification/2026-07-28" target="_blank" rel="noopener">Model Context Protocol — спецификация</a></div>
+        <div class="m-src">modelcontextprotocol.io</div>
+      </td>
+      <td class="c-what"><div class="m-what">Единый стандарт подключения агента к внешним системам: архитектура, сервер и клиент, инструменты, ресурсы, транспорт и требования совместимости. Открытая спецификация с примерами реализации.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Своя выгрузка из 1С как инструмент.</strong> Если данные лежат в 1С или CRM и доступа через коннектор нет, агент подключается к ним по этому протоколу — вместо ручной выгрузки каждый раз.</div></td>
+    </tr>
+
+    <tr>
+      <td class="c-num">13</td>
+      <td class="c-title">
+        <div class="m-name"><span class="tag t4">Альтернативы</span><a href="https://developers.sber.ru/docs/ru/gigachain/tutorials/agents" target="_blank" rel="noopener">GigaChat — создание собственного агента</a></div>
+        <div class="m-src">developers.sber.ru</div>
+      </td>
+      <td class="c-what"><div class="m-what">Практический туториал пошагово: создание агента, выбор модели и инструментов, отладка, вызов через API. Русскоязычная документация, решения и инфраструктура в российском контуре.</div></td>
+      <td class="c-use"><div class="m-use"><strong>Байер на российском контуре.</strong> Если переговорный тренажёр нужно крутить внутри компании — тот же сценарий на GigaChat: профиль, инструкция, переписка, разбор по критериям.</div></td>
+    </tr>
+
+  </tbody>
+</table>
 </div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">4</div>
-    <div class="card-title-area">
-      <h3><a href="https://showdata.rosstat.gov.ru/finder/descriptors/277328" target="_blank" rel="noopener">Росстат: Витрина данных — средние потребительские цены</a> — showdata.rosstat.gov.ru</h3>
-      <p class="summary">Конструктор отчёта по показателю «Средние потребительские цены (тарифы) на товары и услуги»: ряд с 1995 по 2026 год, разрезы по набору товаров, регионам и периоду, готовый отчёт и конструктор в два клика. Дата последнего обновления показана на карточке.</p>
-      <p class="useful"><strong>Чем полезно:</strong> собирает паспорт под вашу географию. Если сеть — региональная, а не федеральная, байер спросит про цену «в своём регионе» — и ответ находится здесь, в одном разрезе, без отдельного поиска. Открыть, когда первый запросник дал слишком общую цифру по России.</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">5</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.cbr.ru/hd_base/keyrate/" target="_blank" rel="noopener">Банк России: ключевая ставка — история по дням</a> — cbr.ru</h3>
-      <p class="summary">Официальная история ключевой ставки с 17.09.2013 по текущую дату: действующая ставка, календарь дат, когда Совет директоров её менял, и выгрузка в PDF. На 29.10.2026 ставка — 14,00% годовых.</p>
-      <p class="useful"><strong>Чем полезно:</strong> самый проверяемый макро-факт в разговоре с байером: ставку знает финансовый директор сети, и она не подлежит спору. Особенно полезно для строк, где речь о стоимости денег и о том, почему цена растёт вслед за ставкой, а не по вашей воле. Дата в таблице — готовая ссылка с датой для колонки 2.</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">6</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.cbr.ru/statistics/ddkp/infl/" target="_blank" rel="noopener">Банк России: ключевая ставка и инфляция</a> — cbr.ru</h3>
-      <p class="summary">Помесячная таблица в одном окне: ставка, фактическая инфляция в % год к году и цель по инфляции. Данные с мая 2026: ставка 14,00%, инфляция 6,35% при цели 4,00%. Есть выгрузка в XLSX за любой период.</p>
-      <p class="useful"><strong>Чем полезно:</strong> закрывает возражение «инфляция же 4%». Разрыв между фактической инфляцией и целью ЦБ — аргумент, который показывает: рост цен не завершился, и решение по ставке ещё будет. Отсюда же берётся формулировка «рынок ждёт дальнейшего ужесточения», которую байер слышал от своего финансового директора.</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">7</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.moex.com/a2102" target="_blank" rel="noopener">Московская биржа: срочные контракты товарного рынка</a> — moex.com</h3>
-      <p class="summary">Фьючерсные контракты на пшеницу, сахар-сырец, сахар, товары мирового агропромышленного комплекса, нефтепродукты и энергоносители, плюс опционы на них. Все спецификации с параметрами контрактов.</p>
-      <p class="useful"><strong>Чем полезно:</strong> биржевая котировка сырья — самый твёрдый факт в слое «сырьё»: её видно в терминале, и она меняется каждый день. Открыть, когда Perplexity выдал ссылку на новость о росте цены на сахар: вместо пересказа — контракт с датой и тикером. Если ваша категория не торгуется на бирже, тот же приём работает для валюты, дизеля и зерна.</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">8</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.nalog.gov.ru/rn25/news/activities_fts/16596495/" target="_blank" rel="noopener">ФНС России: с 2026 года ставка НДС увеличилась с 20 до 22%</a> — nalog.gov.ru</h3>
-      <p class="summary">Официальное разъяснение: основная ставка НДС с 1 января 2026 года — 22%, пониженная 10% сохранена для социально значимых товаров. Критерий переходного периода — дата отгрузки, а не дата оплаты; приведены ссылки на письма ФНС от 29.12.2025 и от 23.10.2018.</p>
-      <p class="useful"><strong>Чем полезно:</strong> это тот случай, когда ваше повышение цены упирается в налог, а не в вашу волю. Байер получает рост НДС на 2 процентных пункта одинаково по всей категории — значит, это не ваша уступка, а изменение среды. Ссылка с датой идёт в колонку 1 рядом с цифрой, а в колонке 3 формулировка превращается в «это не подорожание поставки, а изменение ставки для всех».</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#7b1fa2;">9</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.rzd-partner.ru/stavka-na-poluvagon/" target="_blank" rel="noopener">РЖД-Партнёр: ставки операторов и тарифы на перевозки</a> — rzd-partner.ru</h3>
-      <p class="summary">Ставка на полувагон и другие базисные ставки в рублях за сутки с указанием месяца и изменения в процентах, тарифы на перевозки по направлениям и решения правления РЖД об изменении уровня тарифов — с датой заседания и номером протокола.</p>
-      <p class="useful"><strong>Чем полезно:</strong> закрывает слой «логистика», который чаще всего остаётся пустым. Тариф на перевозку — официальная цифра с датой, а не «логистика подорожала». Ссылка ведёт на страницу с текущей ставкой и историей изменений, поэтому байер может проверить, что рост общий для рынка, а не следствие вашего перевозчика.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section-title">Запросник и проверка фактов</div>
-<p class="section-lead">Промпт 1 из раздатки отдаётся в Perplexity. Эти страницы — про то, как получить от него отчёт с десятками проверяемых ссылок, а не с уверенным пересказом.</p>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#00838f;">10</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search" target="_blank" rel="noopener">Perplexity: что такое Pro Search</a> — perplexity.ai</h3>
-      <p class="summary">Разбор режима Pro Search: как выбираются модели (Sonar, GPT-5, Claude Sonnet, Gemini), как система сама разбивает вопрос на подзапросы, чем отличается Deep Research от обычного поиска, как работают фокусы Web / Academic / Finance / Files. Отдельная таблица сравнения со стандартным поиском.</p>
-      <p class="useful"><strong>Чем полезно:</strong> объясняет, почему один и тот же промпт 1 даёт разный результат в зависимости от режима. Для аналитической задачи по категории нужен не быстрый ответ, а проход по десяткам источников с цитатами. Здесь же прямо сказано главное правило раздатки: проверяйте ответ по ссылкам, потому что и Pro Search ошибается.</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#00838f;">11</div>
-    <div class="card-title-area">
-      <h3><a href="https://www.perplexity.ai/help-center/en/articles/10352971-practical-tips-for-using-perplexity" target="_blank" rel="noopener">Perplexity: практические советы и структура промпта</a> — perplexity.ai</h3>
-      <p class="summary">Пять элементов сильного запроса: инструкция, контекст, входные данные, ключевые слова и формат вывода. Три типа запросов — информационный, инструкционный, интерактивный — с примерами, включая запрос на нормативные требования по сегменту. Разобранные типовые ошибки: размытый запрос, слишком много за раз, потерянный контекст.</p>
-      <p class="useful"><strong>Чем полезно:</strong> пошаговая сборка промпта 1 из раздатки. Формулировка «найди данные по трём блокам» — это инструкция без контекста; страница объясняет, что добавить, чтобы Perplexity понял: ваша категория и её сырьё, период в 12 месяцев, требуемый формат «факт — цифра — источник — дата». Там же — про запрос по нормативке, полезный для слоя «сырьё».</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#00838f;">12</div>
-    <div class="card-title-area">
-      <h3><a href="https://help.openai.com/ru-ru/articles/9237897" target="_blank" rel="noopener">OpenAI: поиск в интернете с помощью ChatGPT</a> — help.openai.com (рус.)</h3>
-      <p class="summary">Как включить поиск, как ответ с цитатами открывается по ссылке, как найти список источников целиком, и что делать, если поиска нет в меню. Отдельный блок о том, как запрос переписывается для поисковых партнёров и что модель отдаёт им: переформулированный запрос и обезличенный регион — без IP и без переписки.</p>
-      <p class="useful"><strong>Чем полезно:</strong> запасной путь, когда Perplexity недоступен, — с той же вводной, но со ссылками. И предупреждение, которое стоит проговорить участникам: результаты поиска бывают неполными и устаревшими, поэтому «открыть источник и проверить» остаётся обязательным шагом. Подсказка, как переспросить с указанием конкретного источника и даты, если факт выглядит сомнительно.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section-title">Проверка аргумента и работа с байером</div>
-<p class="section-lead">Шаг 6 раздатки — прогнать аргумент «тендером нейронок»: взять готовый паспорт и посмотреть на него глазами байера. Здесь — инструменты, которыми это делается быстрее.</p>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#e65100;">13</div>
-    <div class="card-title-area">
-      <h3><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener">Anthropic: практики промпт-инжиниринга</a> — platform.claude.com</h3>
-      <p class="summary">Живая документация по работе с промптами: как давать роль, как писать примеры, зачем разделять инструкции и данные, когда включать пошаговое рассуждение, как выстраивать цепочки промптов. Отдельные разделы по моделям и по миграции промптов при смене модели.</p>
-      <p class="useful"><strong>Чем полезно:</strong> объясняет, почему один и тот же текст вводной байеру работает по-разному. Разделение инструкций и данных — ровно то, что ломает вводную: когда в блок «Мои аргументы» попадает инструкция, байер начинает обсуждать формат вместо цены. Здесь же — про примеры: один раз показанный ответ закрепляет стиль лучше, чем описание стиля.</p>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <div class="card-num" style="background:#e65100;">14</div>
-    <div class="card-title-area">
-      <h3><a href="https://help.openai.com/ru-ru/articles/10169521-projects-in-chatgpt" target="_blank" rel="noopener">OpenAI: проекты в ChatGPT</a> — help.openai.com (рус.)</h3>
-      <p class="summary">Проект как постоянный контекст: загрузка файлов, инструкции проекта с приоритетом над общими настройками, подключение Google Диска и Slack, память проекта и общий доступ по ссылке. Отдельный блок о приватности: в общем проекте участники видят контекст друг друга.</p>
-      <p class="useful"><strong>Чем полезно:</strong> конспект занятия советует завести паспорт источников по своей категории один раз и подгружать его потом в проекты — здесь описано, как это сделать технически. Второй сценарий: хранить в проекте свой список отраслевых сайтов, чтобы бот при поиске ориентировался именно на них, а не на весь веб. И предупреждение: в общем проекте файлы видят все участники — рабочие выгрузки сюда класть нельзя.</p>
-    </div>
-  </div>
 </div>
 
 <div class="cheatsheet">
-  <h2>📌 Шпаргалка по выбору — что открыть в какой ситуации</h2>
-  <div class="cheat-row"><span class="cheat-task">Нужна цифра по макро — инфляция по товарной группе или региону</span><span class="cheat-arrow">→</span><span class="cheat-tool">Росстат: Цены, инфляция · Витрина данных</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужна ставка или инфляция, которую байер знает наизусть</span><span class="cheat-arrow">→</span><span class="cheat-tool">Банк России: ключевая ставка · ставка и инфляция</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужна котировка сырья, которую не переписать в свою пользу</span><span class="cheat-arrow">→</span><span class="cheat-tool">Московская биржа: товарный рынок</span></div>
-  <div class="cheat-row"><span class="cheat-task">Повышение цены упирается в налог, а не в издержки</span><span class="cheat-arrow">→</span><span class="cheat-tool">ФНС: НДС 20 → 22% с 2026</span></div>
-  <div class="cheat-row"><span class="cheat-task">Слой «логистика» пустой — нужен тариф перевозки</span><span class="cheat-arrow">→</span><span class="cheat-tool">РЖД-Партнёр: ставки и тарифы</span></div>
-  <div class="cheat-row"><span class="cheat-task">Промпт 1 вернул пересказ вместо ссылок на первоисточник</span><span class="cheat-arrow">→</span><span class="cheat-tool">Perplexity: Pro Search · практические советы</span></div>
-  <div class="cheat-row"><span class="cheat-task">Perplexity недоступен — нужен запасной путь с цитатами</span><span class="cheat-arrow">→</span><span class="cheat-tool">OpenAI: поиск в интернете</span></div>
-  <div class="cheat-row"><span class="cheat-task">Байер отвечает не по существу, а по формату вводной</span><span class="cheat-arrow">→</span><span class="cheat-tool">Anthropic: практики промпт-инжиниринга</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужно один раз собрать паспорт источников по своей категории</span><span class="cheat-arrow">→</span><span class="cheat-tool">OpenAI: проекты в ChatGPT</span></div>
-  <div class="cheat-row"><span class="cheat-task">Нужны формула аргумента, четыре промпта и критерии зачёта под рукой</span><span class="cheat-arrow">→</span><span class="cheat-tool">Раздатка практики (Word) · страница домашнего задания</span></div>
+  <h2>📌 Что открыть под конкретную задачу</h2>
+  <div class="cheat-row"><span class="cheat-task">Нужно один раз упаковать свою категорию и паспорт в повторяемую процедуру</span><span class="cheat-arrow">→</span><span class="cheat-tool">Agent Skills · субагенты</span></div>
+  <div class="cheat-row"><span class="cheat-task">Хочется понять, как устроена связка «запросник → байер → разбор»</span><span class="cheat-arrow">→</span><span class="cheat-tool">Building Effective Agents · мультиагентная система</span></div>
+  <div class="cheat-row"><span class="cheat-task">Промпт 1 вернул пересказ вместо ссылок на первоисточник</span><span class="cheat-arrow">→</span><span class="cheat-tool">Мультиагентная система · три подзапроса параллельно</span></div>
+  <div class="cheat-row"><span class="cheat-task">Байер отвечает не по существу, а по формату вводной</span><span class="cheat-arrow">→</span><span class="cheat-tool">Context engineering · разделение инструкций и данных</span></div>
+  <div class="cheat-row"><span class="cheat-task">Байер хвалит «за старание» вместо честной оценки по пяти критериям</span><span class="cheat-arrow">→</span><span class="cheat-tool">Evals · формализация рубрики</span></div>
+  <div class="cheat-row"><span class="cheat-task">Байер выскакивает из роли или выполняет инструкцию из чужого текста</span><span class="cheat-arrow">→</span><span class="cheat-tool">Защита от prompt injection</span></div>
+  <div class="cheat-row"><span class="cheat-task">Паспорт нужно перенести в таблицу без ручного ввода</span><span class="cheat-arrow">→</span><span class="cheat-tool">Structured Outputs · схема пяти колонок</span></div>
+  <div class="cheat-row"><span class="cheat-task">Размечаете сотни строк выгрузки по темам</span><span class="cheat-arrow">→</span><span class="cheat-tool">=GEMINI() в Google Таблицах</span></div>
+  <div class="cheat-row"><span class="cheat-task">Данные в таблице обновились, а агент работает со старой копией</span><span class="cheat-arrow">→</span><span class="cheat-tool">Подключение Google Диска</span></div>
+  <div class="cheat-row"><span class="cheat-task">Паспорт нужно пересобирать каждый месяц без ручного контроля</span><span class="cheat-arrow">→</span><span class="cheat-tool">Запланированные задачи</span></div>
+  <div class="cheat-row"><span class="cheat-task">Данные лежат в 1С или CRM, доступа через коннектор нет</span><span class="cheat-arrow">→</span><span class="cheat-tool">MCP · собственная выгрузка</span></div>
+  <div class="cheat-row"><span class="cheat-task">Тренажёр нужно крутить внутри российского контура</span><span class="cheat-arrow">→</span><span class="cheat-tool">GigaChat · создание агента</span></div>
 </div>
 
 </div>
