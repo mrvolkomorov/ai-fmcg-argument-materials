@@ -130,12 +130,27 @@
   footer a { color: #1a2e44; }
   @media (max-width: 860px) {
     header h1 { font-size: 22px; }
+    /* таблица превращается в карточки: без display:block на table tbody
+       ячейки остаются table-cell и четыре колонки сжимаются в 271px */
+    table.materials,
+    table.materials tbody,
+    table.materials tbody tr,
+    table.materials tbody td { display: block; width: 100%; }
     table.materials thead { display: none; }
-    table.materials tbody tr { display: block; padding: 14px 16px; border-bottom: 1px solid #eceef1; }
-    table.materials tbody td { display: block; padding: 0; border: none; }
+    table.materials tbody tr {
+      padding: 14px 16px; border-bottom: 1px solid #eceef1;
+    }
+    table.materials tbody td { padding: 0; border: none; }
+    table.materials tbody tr:nth-child(even) { background: #fafbfc; }
     td.c-num { margin-bottom: 4px; }
-    td.c-title { margin-bottom: 8px; }
-    td.c-what, td.c-use { margin-bottom: 8px; }
+    td.c-title { margin-bottom: 10px; }
+    td.c-what, td.c-use { margin-bottom: 10px; }
+    td.c-what::before, td.c-use::before {
+      display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; color: #8d99a8; margin-bottom: 4px;
+    }
+    td.c-what::before { content: "Что внутри"; }
+    td.c-use::before { content: "Чем полезен"; }
     .cheat-row { flex-direction: column; align-items: flex-start; gap: 4px; }
   }
 </style>
